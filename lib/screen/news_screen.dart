@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
 class NewsScreen extends StatelessWidget {
-  final String newsHeading;
-  final String imgUrl;
-  final String newsDesc;
-  final String newsUrl;
-  const NewsScreen({
+  String newsHeading;
+  String imgUrl;
+  String newsDesc;
+  String newsUrl;
+  String newsContent;
+  NewsScreen({
     super.key,
     required this.imgUrl,
     required this.newsHeading,
     required this.newsDesc,
+    required this.newsContent,
     required this.newsUrl,
   });
 
@@ -47,6 +49,13 @@ class NewsScreen extends StatelessWidget {
                 ),
                 Text(
                   newsDesc,
+                  style: const TextStyle(fontSize: 16, color: Colors.black54),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  newsContent,
                   style: const TextStyle(fontSize: 18),
                 ),
               ],
